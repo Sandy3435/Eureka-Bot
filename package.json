@@ -1,0 +1,24 @@
+{
+  "name": "whatsapp-opportunity-bot",
+  "version": "1.0.0",
+  "description": "WhatsApp automation: channel opportunity seekers to a group, answer questions via AI, nudge admin for actions.",
+  "main": "src/index.js",
+  "scripts": {
+    "start": "node src/index.js",
+    "dev": "node --watch src/index.js",
+    "pair": "node src/index.js",
+    "reset-auth": "node -e \"const fs=require('fs');fs.rmSync('data/auth',{recursive:true,force:true});console.log('auth cleared')\""
+  },
+  "dependencies": {
+    "@whiskeysockets/baileys": "^6.7.9",
+    "dotenv": "^16.4.7",
+    "groq-sdk": "^0.9.0",
+    "@google/generative-ai": "^0.21.0",
+    "openai": "^4.77.0",
+    "pino": "^9.5.0",
+    "qrcode-terminal": "^0.12.0"
+  },
+  "engines": {
+    "node": ">=20"
+  }
+}
